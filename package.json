@@ -1,0 +1,22 @@
+{
+  "name": "sootube",
+  "version": "1.0.0",
+  "description": "Cloning Youtube : NodeJS, vanillaJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soohyeok/sootube.git"
+  },
+  "author": "Soohyeok Lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soohyeok/sootube/issues"
+  },
+  "homepage": "https://github.com/soohyeok/sootube#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
