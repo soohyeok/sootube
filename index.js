@@ -5,4 +5,4 @@ app.get('/', function (req, res) {
   res.send('Hello World')
 })
  
-app.listen(4000, console.log(`Listening to http://localhost:4000`))
+app.listen(4000);
