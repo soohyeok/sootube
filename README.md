@@ -12,7 +12,7 @@ npm start
 
 ## Pages:
 - [ ] Home
-- [x] Join
+- [x] SignUp
 - [x] Login
 - [x] Search
 - [ ] User Detail

@@ -1,4 +1,4 @@
-export const signUp = (req, res) => res.render("signUp", {pageTitle: "Sign Up"});
+export const signUp = (req, res) => res.render("signUp", {pageTitle: "signUp"});
 export const login = (req, res) => res.render("login", {pageTitle: "Login"});
 export const logout = (req, res) => res.render("logout", {pageTitle: "Logout"});
 
