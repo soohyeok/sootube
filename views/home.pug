@@ -5,6 +5,7 @@ block content
     .videos
         each vid in videosData
             +videoCatalog({
+                id: vid.id,
                 title: vid.title,
                 views: vid.views,
                 videoFile: vid.videoFile
