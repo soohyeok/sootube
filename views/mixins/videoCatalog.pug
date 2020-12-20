@@ -1,0 +1,5 @@
+mixin videoCatalog(video = {})
+    .videoCatalog
+        video.videoCatalog__thumbnail(src=video.videoFile, controls=true)
+        h4.videoCatalog__title=video.title
+        h6.videoCatalog__views=video.views
