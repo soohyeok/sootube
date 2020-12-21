@@ -6,7 +6,6 @@ export const home = async (req, res) => {
     const videosData = await Video.find({}).sort({ _id: -1 });
     res.render("home", { pageTitle: "Home", videosData });
   } catch (error) {
-    console.log(error);
     res.render("home", { pageTitle: "Home", videosData: [] });
   }
 };
@@ -14,7 +13,7 @@ export const search = (req, res) => {
   const {
     query: { term: searchingBy },
   } = req;
-  res.render("search", { pageTitle: "Search", searchingBy, videosData });
+  res.render("search", { pageTitle: "Search", searchingBy });
 };
 
 export const getVideoUpload = (req, res) =>
@@ -77,6 +76,8 @@ export const videoDelete = async (req, res) => {
   } = req;
   try {
     await Video.findOneAndRemove({ _id: id });
-  } catch (error) {}
+  } catch (error) {
+    console.log(error);
+  }
   res.redirect(routes.home);
 };

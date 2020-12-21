@@ -1,15 +1,15 @@
 import express from "express";
-import bodyParser from "body-Parser";
+import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import helmet from "helmet";
 import morgan from "morgan";
-import {localsMiddleware} from "./middlewares";
+import { localsMiddleware } from "./middlewares";
 import routes from "./routes";
 import globalRouter from "./routers/globalRouter";
 import userRouter from "./routers/userRouter";
 import videoRouter from "./routers/videoRouter";
 
-const app = express()
+const app = express();
 
 app.use(helmet());
 app.set("view engine", "pug");
@@ -17,12 +17,15 @@ app.use("/uploads", express.static("uploads"));
 
 app.use(cookieParser());
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan("dev"));
 
-app.use(function(req, res, next) {
-    res.setHeader("Content-Security-Policy", "script-src 'self' https://archive.org");
-    return next();
+app.use(function contentSecurity(req, res, next) {
+  res.setHeader(
+    "Content-Security-Policy",
+    "script-src 'self' https://archive.org"
+  );
+  return next();
 });
 
 app.use(localsMiddleware);
