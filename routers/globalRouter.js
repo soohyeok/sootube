@@ -1,5 +1,11 @@
 import express from "express";
-import { getLogin, postLogin, logout, getSignUp, postSignUp} from "../controllers/userController";
+import {
+  getLogin,
+  postLogin,
+  logout,
+  getSignUp,
+  postSignUp,
+} from "../controllers/userController";
 import { home, search } from "../controllers/videoController";
 import routes from "../routes";
 
