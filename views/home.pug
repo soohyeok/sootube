@@ -1,12 +1,78 @@
-extends layouts/main.pug
+extends layouts/main
 include mixins/videoCatalog
 
 block content
-    .videos
-        each vid in videosData
+    .home-videos
+        each item in videosData
             +videoCatalog({
-                id: vid.id,
-                title: vid.title,
-                views: vid.views,
-                videoFile: vid.fileUrl
+                id:item.id,
+                title:item.title,
+                views:item.views,
+                videoFile:item.fileUrl
+            })
+            +videoCatalog({
+                id:item.id,
+                title:item.title,
+                views:item.views,
+                videoFile:item.fileUrl
+            })
+            +videoCatalog({
+                id:item.id,
+                title:item.title,
+                views:item.views,
+                videoFile:item.fileUrl
+            })
+            +videoCatalog({
+                id:item.id,
+                title:item.title,
+                views:item.views,
+                videoFile:item.fileUrl
+            })
+            +videoCatalog({
+                id:item.id,
+                title:item.title,
+                views:item.views,
+                videoFile:item.fileUrl
+            })
+            +videoCatalog({
+                id:item.id,
+                title:item.title,
+                views:item.views,
+                videoFile:item.fileUrl
+            })
+            +videoCatalog({
+                id:item.id,
+                title:item.title,
+                views:item.views,
+                videoFile:item.fileUrl
+            })
+            +videoCatalog({
+                id:item.id,
+                title:item.title,
+                views:item.views,
+                videoFile:item.fileUrl
+            })
+            +videoCatalog({
+                id:item.id,
+                title:item.title,
+                views:item.views,
+                videoFile:item.fileUrl
+            })
+            +videoCatalog({
+                id:item.id,
+                title:item.title,
+                views:item.views,
+                videoFile:item.fileUrl
+            })
+            +videoCatalog({
+                id:item.id,
+                title:item.title,
+                views:item.views,
+                videoFile:item.fileUrl
+            })
+            +videoCatalog({
+                id:item.id,
+                title:item.title,
+                views:item.views,
+                videoFile:item.fileUrl
             })
