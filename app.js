@@ -4,6 +4,7 @@ import cookieParser from "cookie-parser";
 import helmet from "helmet";
 import morgan from "morgan";
 import passport from "passport";
+import session from "express-session";
 
 import { localsMiddleware } from "./middlewares";
 import routes from "./routes";
@@ -30,6 +31,13 @@ app.use(morgan("dev"));
 //   );
 //   return next();
 // });
+app.use(
+  session({
+    secret: process.env.COOKIE_SECRET,
+    resave: true,
+    saveUninitialized: false,
+  })
+);
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(localsMiddleware);
