@@ -1,5 +1,6 @@
 .social-login
     button.social-login--google
+        a(href=routes.google)
             span
                 i.fab.fa-google-plus-square
             |Continue with Google
@@ -9,10 +10,12 @@
                 i.fab.fa-github-square 
             |Continue with Github
     button.social-login--facebook
-        span
-            i.fab.fa-facebook-square
-        |Continue with Facebook
+        a(href=routes.facebook)
+            span
+                i.fab.fa-facebook-square
+            |Continue with Facebook
     button
-        span.social-login--linkedIn
-            i.fab.fa-linkedin
-        |Continue with Linkedin
+        a(href=routes.linkedIn)
+            span.social-login--linkedIn
+                i.fab.fa-linkedin
+            |Continue with Linkedin
