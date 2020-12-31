@@ -9,7 +9,7 @@ import {
   postSignUp,
   githubLogin,
   postGithubLogin,
-  getMe,
+  getProfile,
 } from "../controllers/userController";
 import { home, search } from "../controllers/videoController";
 import { onlyPrivate, onlyPublic } from "../middlewares";
@@ -33,6 +33,6 @@ globalRouter.get(
   postGithubLogin
 );
 
-globalRouter.get(routes.me, getMe);
+globalRouter.get(routes.profile, getProfile);
 
 export default globalRouter;
