@@ -27,13 +27,13 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan("dev"));
-// app.use(function contentSecurity(req, res, next) {
-//   res.setHeader(
-//     "Content-Security-Policy",
-//     "script-src 'self' https://archive.org"
-//   );
-//   return next();
-// });
+app.use(function contentSecurity(req, res, next) {
+  res.setHeader(
+    "Content-Security-Policy",
+    "img-src 'self' https://avatars0.githubusercontent.com/"
+  );
+  return next();
+});
 app.use(
   session({
     secret: process.env.COOKIE_SECRET,
