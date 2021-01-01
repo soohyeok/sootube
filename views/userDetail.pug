@@ -1,4 +1,5 @@
 extends layouts/main.pug
+include mixins/videoCatalog
 
 block content
     .user-profile
@@ -10,4 +11,12 @@ block content
                 a(href=`/users${routes.editProfile}`)
                     button ✏️ Edit Profile
                 a(href=`/users${routes.changePassword}`)
-                    button 🔒 Change Password 
+                    button 🔒 Change Password
+        .home
+            each item in user.videos
+                +videoCatalog({
+                    id:item.id,
+                    title:item.title,
+                    views:item.views,
+                    videoFile:item.fileUrl
+                })
