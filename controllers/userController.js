@@ -99,6 +99,16 @@ export const postFacebookLogin = (req, res) => {
   res.redirect(routes.home);
 };
 
+export const googleLogin = passport.authenticate("google", {
+  scope: ["profile"],
+});
+
+export const googleLoginCallback = async (_, __, profile, cb) => {};
+
+export const postGoogleLogin = (req, res) => {
+  res.redirect(routes.home);
+};
+
 export const logout = (req, res) => {
   req.logout();
   res.redirect(routes.home);

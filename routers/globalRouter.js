@@ -12,6 +12,8 @@ import {
   getProfile,
   facebookLogin,
   postFacebookLogin,
+  postGoogleLogin,
+  googleLogin,
 } from "../controllers/userController";
 import { home, search } from "../controllers/videoController";
 import { onlyPrivate, onlyPublic } from "../middlewares";
@@ -40,6 +42,13 @@ globalRouter.get(
   routes.facebookCallback,
   passport.authenticate("facebook", { failureRedirect: "/login" }),
   postFacebookLogin
+);
+
+globalRouter.get(routes.google, googleLogin);
+globalRouter.get(
+  routes.googleCallback,
+  passport.authenticate("google", { failureRedirect: "/login" }),
+  postGoogleLogin
 );
 
 globalRouter.get(routes.profile, getProfile);

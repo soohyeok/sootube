@@ -26,6 +26,9 @@ const GITHUB_CALLBACK = "/auth/github/callback";
 const FACEBOOK = "/auth/facebook";
 const FACEBOOK_CALLBACK = "/auth/facebook/callback";
 
+const GOOGLE = "/auth/google";
+const GOOGLE_CALLBACK = "/auth/google/callback";
+
 const routes = {
   home: HOME,
   signUp: SIGNUP,
@@ -66,6 +69,8 @@ const routes = {
   profile: PROFILE,
   facebook: FACEBOOK,
   facebookCallback: FACEBOOK_CALLBACK,
+  google: GOOGLE,
+  googleCallback: GOOGLE_CALLBACK,
 };
 
 export default routes;
