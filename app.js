@@ -28,10 +28,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan("dev"));
 app.use(function contentSecurity(req, res, next) {
-  res.setHeader(
-    "Content-Security-Policy",
-    "img-src 'self' https://avatars0.githubusercontent.com/"
-  );
+  res.setHeader("Content-Security-Policy", "img-src *");
   return next();
 });
 app.use(
