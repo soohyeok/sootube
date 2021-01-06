@@ -11,9 +11,6 @@
       margin-bottom: 25px;
     }
     .video__author {
-      text-align: right;
-      display: block;
-      margin-bottom: 15px;
       a {
         color: #3498db;
       }
@@ -37,8 +34,30 @@
   }
   .video__comments {
     margin-top: 25px;
+    text-align: center;
     .video__comment-number {
       font-size: 18px;
+    }
+    .add__comment {
+      margin-top: 25px;
+      width: 100%;
+      input {
+        width: 100%;
+      }
+    }
+    .video__comments-list {
+      margin-top: 50px;
+      li {
+        list-style-type: none;
+        background-color: #3498db;
+        color: white;
+        padding: 15px;
+        border-radius: 20px;
+        border-bottom-left-radius: 0px;
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+      }
     }
   }
 }
